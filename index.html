@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Visualizer Three.js</title>
+  <style>
+    #content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #audio {
+      margin-top: 10px;
+    }
+
+    #ball-container {
+      width: 500px;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+<div id="content">
+    <label for="thefile" class="file">Choose an audio file
+    </label>
+    <audio id="audio" controls></audio>
+    <div id="ball-container">
+      <div id="out"></div>
+    </div>
+    <input type="file" id="thefile" accept="audio/*" />
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js'></script>
+<script src='https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.3.0/simplex-noise.min.js'></script>
+<script  src="./script.js"></script>
+</body>
+</html>
